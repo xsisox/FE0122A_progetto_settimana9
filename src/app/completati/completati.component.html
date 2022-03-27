@@ -1,0 +1,8 @@
+<div class="text-center m-5">
+    <p class="mt-4" *ngif="tasks.length >= 0">{{messaggio}}</p>
+      <ul>
+          <div *ngFor="let imp of tasks" >
+            <li *ngIf="imp.completed">- {{imp.title}}</li>
+          </div>
+      </ul>
+    </div>

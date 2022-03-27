@@ -1,0 +1,20 @@
+
+<div class="text-center m-5">
+    <div>
+        <input type="text" [(ngModel)]="task"/>
+        <button (click)="addTask()">+</button>
+        <p class="mt-4" *ngIf="!tasks.length">{{messaggio}}</p>
+    </div>
+
+
+
+    <div class="mt-4">
+      <ul>
+          <div *ngFor="let imp of tasks">
+            <li *ngIf="imp.completed == false" >- {{imp.title}}
+              <span (click)="completato(imp)" type="button">✅</span>
+            </li>
+          </div>
+      </ul>
+    </div>
+  </div>
